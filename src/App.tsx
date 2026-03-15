@@ -11,24 +11,15 @@ export const LINKS = [
     {to: '/reviewers', label: 'Reviewers'},
 ];
 
-
 function App() {
     return (
         <Flex style={{minHeight: '100vh'}}>
-            <Box
-                p="5"
-                style={{
-                    width: 220,
-                    borderRight: '1px solid var(--gray-4)',
-                    background: 'var(--gray-1)',
-                    flexShrink: 0,
-                }}
-            >
+            <Box p="5" className="w-[220px] flex-shrink-0 border-r border-gray-4 bg-gray-1">
                 <Heading size="4" mb="6">Fechallenge</Heading>
                 <Sidebar/>
             </Box>
 
-            <Box flexGrow="1" p="6" style={{overflow: 'hidden'}}>
+            <Box flexGrow="1" p="6" className="overflow-hidden">
                 <Routes>
                     <Route path="/" element={<Navigate to={LINKS[0].to} replace/>}/>
                     <Route path={LINKS[0].to} element={<BothPage/>}/>

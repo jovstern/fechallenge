@@ -44,7 +44,6 @@ export const UsersPage = () => {
                     estimateSize={70}
                 />
             )}
-
         </Flex>
     );
 };
